@@ -1,15 +1,33 @@
-<nav class="navbar nav-default navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#" scroll-to="welcome" offset="50"><span>Suterra</span></a>
+<div>
+  <div id='header' class="header">
+    <div class="header-options-container">
+      <div class="logo-container"><h2>SUTERRA</h2></div>
+      <div class="header-options">
+        <div class="header-option">Deployments</div>
+        <div class="header-option">Clients</div>
+        <div class="header-option">Puffers</div>
+        <div class="header-option">ROI</div>
+        <div class="header-option">Login</div>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-left">
-            <li></li>
-        </ul>
+    <div class="position-selector">
+      <div class="header-option sub-header-option">
+        Save
+      </div>
+      <div class="header-option sub-header-option">
+        Back
+      </div>
+      <div class="sub-header-option">
+        <label>Lat.</label><input type="text" id="latitude">
+      </div>
+      <div class="sub-header-option">
+        <label>Long.</label><input type="text" id="longitude">
+      </div>
     </div>
-</nav>
+  </div>
 
-<div id="map">
-    <navigator></navigator>
-    <marker></marker>
+  <div id="map">
+      <navigator></navigator>
+      <marker></marker>
+  </div>
 </div>
