@@ -6,14 +6,14 @@ import {Map} from 'mapbox-gl';
 
 @Component({
     selector: 'navigator',
-    template: require<any>('./navigator.component.html'),
+    template: require<any>('./searcher.component.html'),
     styles: [
-        require<any>('./navigator.component.less'),
+        require<any>('./searcher.component.less'),
         require<any>('../../../styles/main.less')
     ],
     providers: []
 })
-export class NavigatorComponent {
+export class SearcherComponent {
     private address: string;
     private map: Map;
 

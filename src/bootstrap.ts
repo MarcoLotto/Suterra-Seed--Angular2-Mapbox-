@@ -5,7 +5,7 @@ import {FormsModule}   from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {MapComponent} from './app/components/map/map.component';
-import {NavigatorComponent} from './app/components/navigator/navigator.component';
+import {SearcherComponent} from './app/components/searcher/searcher.component';
 import {MarkerComponent} from './app/components/marker/marker.component';
 
 import {MapService} from './app/services/map.service';
@@ -16,7 +16,7 @@ import {GeocodingService} from './app/services/geocoding.service';
     bootstrap: [MapComponent],
     declarations: [
         MapComponent,
-        NavigatorComponent,
+        SearcherComponent,
         MarkerComponent
     ],
     providers: [

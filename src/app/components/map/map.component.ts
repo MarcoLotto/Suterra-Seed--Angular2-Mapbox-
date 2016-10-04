@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavigatorComponent} from '../navigator/navigator.component';
+import {SearcherComponent} from '../searcher/searcher.component';
 import {MarkerComponent} from '../marker/marker.component';
 import {MapService} from '../../services/map.service';
 import {GeocodingService} from '../../services/geocoding.service';
