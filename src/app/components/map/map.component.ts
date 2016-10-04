@@ -24,7 +24,7 @@ export class MapComponent {
 
         let map = new Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/light-v9',
+            style: 'mapbox://styles/mapbox/satellite-streets-v10',
             zoom: 5,
             center: [-78.880453, 42.897852]
         });
