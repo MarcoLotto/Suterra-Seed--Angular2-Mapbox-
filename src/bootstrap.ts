@@ -7,6 +7,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {MapComponent} from './app/components/map/map.component';
 import {SearcherComponent} from './app/components/searcher/searcher.component';
 import {MarkerComponent} from './app/components/marker/marker.component';
+import {ToolboxComponent} from './app/components/toolbox/toolbox.component';
 
 import {MapService} from './app/services/map.service';
 import {GeocodingService} from './app/services/geocoding.service';
@@ -17,7 +18,8 @@ import {GeocodingService} from './app/services/geocoding.service';
     declarations: [
         MapComponent,
         SearcherComponent,
-        MarkerComponent
+        MarkerComponent,
+        ToolboxComponent
     ],
     providers: [
         MapService,

@@ -5,7 +5,7 @@ import {Location} from '../../core/location.class';
 import {Map} from 'mapbox-gl';
 
 @Component({
-    selector: 'navigator',
+    selector: 'searcher',
     template: require<any>('./searcher.component.html'),
     styles: [
         require<any>('./searcher.component.less'),

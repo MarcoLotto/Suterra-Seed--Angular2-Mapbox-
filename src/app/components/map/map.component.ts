@@ -17,22 +17,41 @@ import {LngLat, Map} from 'mapbox-gl';
 export class MapComponent {
     @ViewChild(MarkerComponent) markerComponent: MarkerComponent;
 
+    map: Map;
     constructor(private mapService: MapService, private geocoder: GeocodingService) {
+
     }
 
     ngOnInit() {
-
-        let map = new Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/satellite-streets-v10',
-            zoom: 5,
-            center: [-78.880453, 42.897852]
-        });
-
-        this.mapService.map = map;
+      this.checkCurrentLocation();
     }
 
     ngAfterViewInit() {
         this.markerComponent.Initialize();
+    }
+
+    initializeMap(latitude: number, longitude: number){
+      this.map = new Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/satellite-streets-v10',
+          zoom: 13,
+          center: [longitude, latitude]
+      });
+      this.mapService.map = this.map;
+    }
+
+    checkCurrentLocation(){
+      if (navigator.geolocation) {
+        var self = this;
+        navigator.geolocation.getCurrentPosition(
+          function(position) {
+            let latitude = position.coords["latitude"];
+            let longitude = position.coords["longitude"];
+            self.initializeMap(latitude, longitude);
+          });
+      }
+      else{
+        this.initializeMap(0, 0);
+      }
     }
 }
