@@ -48,6 +48,9 @@ export class MapComponent {
             let latitude = position.coords["latitude"];
             let longitude = position.coords["longitude"];
             self.initializeMap(latitude, longitude);
+          },
+          function(error) {
+           self.initializeMap(51.47879, 0);
           });
       }
       else{
